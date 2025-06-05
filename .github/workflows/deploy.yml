@@ -10,6 +10,8 @@ jobs:
 
     env:
       AWS_REGION: ${{ secrets.AWS_REGION }}
+      TF_VAR_aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      TF_VAR_aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     steps:
     - uses: actions/checkout@v3
@@ -36,5 +38,3 @@ jobs:
     - name: Terraform Apply
       run: terraform apply -auto-approve
       working-directory: ./terraform
-      env:
-        AWS_REGION: ${{ secrets.AWS_REGION }}
