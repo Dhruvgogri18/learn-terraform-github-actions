@@ -1,25 +1,25 @@
-variable "aws_access_key_id" {
+variable "AWS_ACCESS_KEY_ID" {
   description = "AWS session access ID"
   type = string
 }
 
-variable "aws_secret_access_key" {
+variable "AWS_SECRET_ACCESS_KEY" {
   description = "AWS session secret key"
   type = string
 }
 
-variable "tf_api_token" {
+variable "TF_API_TOKEN" {
   description = "secuirty token for terraform session"
   type = string
 }
 
-variable "aws_region" {
+variable "AWS_REGION" {
   description = "AWS region to which PAS will be deployed"
   type = string
   default = "us-west-2"
 }
 
-variable "aws_s3_bucket" {
+variable "S3_BUCKET_NAME" {
     description = "AWS s3 bucket"
     type = string
 }
