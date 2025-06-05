@@ -1,28 +1,24 @@
-variable "AWS_ACCESS_KEY_ID" {
-  description = "AWS session access ID"
-  type = string
+variable "aws_access_key_id" {
+  description = "aws access key id"
+  type        = string
 }
 
-variable "AWS_SECRET_ACCESS_KEY" {
-  description = "AWS session secret key"
-  type = string
+variable "aws_secret_access_key" {
+  description = "aws secret access key"
+  type        = string
 }
 
-variable "TF_API_TOKEN" {
-  description = "secuirty token for terraform session"
-  type = string
+variable "aws_region" {
+  description = "aws region to deploy resources"
+  type        = string
+  default     = "us-west-2"
 }
 
-variable "AWS_REGION" {
-  description = "AWS region to which PAS will be deployed"
-  type = string
-  default = "us-west-2"
+variable "s3_bucket_name" {
+  description = "s3 bucket name to upload lambda code"
+  type        = string
 }
 
-variable "S3_BUCKET_NAME" {
-    description = "AWS s3 bucket"
-    type = string
-}
 
 variable "s3_key" {
   description = "s3 key"
