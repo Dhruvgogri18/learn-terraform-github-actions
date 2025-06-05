@@ -1,5 +1,9 @@
 terraform {
-  backend "s3" {}
+  backend "s3" {
+    bucket = "terraform-test-21f49187"
+    key    = "lambda/terraform.tfstate"
+    region = "us-west-2"
+  }
   required_version = ">= 0.13"
 
   required_providers {
